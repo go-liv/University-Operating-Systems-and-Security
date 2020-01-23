@@ -1,0 +1,72 @@
+Script started on 2020-01-23 16:29:50+0000
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ exite[K./rung++ -o run adv1.cpp./run[Kg++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cppexit[Ke[K./run
+orange - - / - - 10
+see - - / - - 10
+1second - - / - - 10
+<Object> <Action> <Time> ...
+Check
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+table - - / - - 10
+lift - - / - - 10
+diamond - - / - - 10
+<Object> <Action> <Time> ...
+Check
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+drop - - / - - 10
+drop - - / - - 10
+<Move> <Time>
+First bad
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+left - - / - - 10
+2seconds - - / - - 10
+<Move> <Time>
+Check
+Check
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+apple - - / - - 10
+small - - / - - 10
+eat - - / - - 10
+<Object> <Action> <Time> ...
+Check
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+eft - - / - - 10
+2seconds - - / - - 10
+forward - - / - - 10
+1second - - / - - 10
+<Move> <Time> <Move> <Time>
+First bad
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+left - - / - - 10
+2seconds - - / - - 10
+forward - - / - - 10
+1second - - / - - 10
+<Move> <Time> <Move> <Time>
+Check
+Check
+Check
+Check
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+kitchen - - / - - 10
+ball - - / - - 10
+2seconds - - / - - 10
+<Object> <Action> <Time> ...
+Not the right syntax
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ ./rung++ -o run adv1.cpp
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ g++ -o run adv1.cpp./run[K
+orange - - / - - 10
+lift - - / - - 10
+right - - / - - 10
+<Object> <Action> <Time> ...
+Not the right syntax
+]0;Lab 1[01;32mdramaturgo@matrix[00m:[01;34m~/Uni Stuff/2nd Year/Operating Systems and Security/Operatiing-Systems-and-Security/Lab 1[00m$ exit
+exit
+
+Script done on 2020-01-23 16:33:28+0000

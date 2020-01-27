@@ -1,0 +1,94 @@
+Script started on 2020-01-24 15:03:40+0000
+]0;Lab 2[01;32mroot@pcDoSuegue[00m:[01;34m/media/dramaturgo/72a98efb-9a95-405d-a6ee-3291421ee42a/Uni Stuff/2nd Year/Opeerating Systems and Security/Operating-Systems-and-Security/Lab 2[00m# cd $home
+]0;Home[01;32mroot@pcDoSuegue[00m:[01;34m~[00m# cd [K[Kd dDo[K[Kdra[K[K[K[K[K[Kls
+]0;ls --color=auto[0m[01;34m5004CEM_Session[0m  [01;34mDocuments[0m  [01;34mDownloads[0m  [01;34mMusic[0m  [01;34mPictures[0m  [01;34mPublic[0m  [01;34mTemplates[0m  [01;34mVideos[0m
+]0;Home: ls[01;32mroot@pcDoSuegue[00m:[01;34m~[00m# cd 5004CEM_Session/
+]0;5004CEM_Session[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session[00m# cd[K[Kcd deoliveg/
+]0;deoliveg[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg[00m# cd [K[K[Kdate "+%D"
+]0;date "+%D"01/24/20
+]0;deoliveg: date[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg[00m# date --date""=""[C5" "y"e"a"r" "a"g"i"[1P"o"
+]0;date --date="5 year ago"Sat 24 Jan 15:10:45 GMT 2015
+]0;deoliveg: date[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg[00m# cd M[K[K[K[Kls
+]0;ls --color=auto[0m[01;34mMIGUEL5004CEM2020[0m
+]0;deoliveg: ls[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg[00m# cd MIGUEL5004CEM2020/
+]0;MIGUEL5004CEM2020[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020[00m# cd porfo[K[K[K[KPortfolio1-2020/
+]0;Portfolio1-2020[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020[00m# cd lLab1
+Lab10-5004CEM/ Lab1-5004CEM/  
+]0;Portfolio1-2020[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020[00m# cd Lab1-5004CEMM/
+]0;Lab1-5004CEM[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# p wd
+]0;pwd/home/dramaturgo/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM
+]0;Lab1-5004CEM: pwd[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# c lear
+[3J[H[2J]0;Lab1-5004CEM[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# l ast -1
+]0;last -1dramatur tty7         :0               Fri Jan 24 14:04    gone - no logout
+
+wtmp begins Thu Jan 23 22:08:07 2020
+]0;Lab1-5004CEM: last[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# awwk '/dramaturgo/ {print}' /etc/passwd
+]0;awk '/dramaturgo/ {print}' /etc/passwddramaturgo:x:1000:1000:Guilherme Miguel,,,:/home/dramaturgo:/bin/bash
+]0;Lab1-5004CEM: awk[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# m an msg[K[Kesg
+]0;man mesg[?1049h[22;0;0t[?1h=MESG(1)                               User Commands                               MESG(1)[m
+[m
+[1mNAME[0m[m
+       mesg - display (or do not display) messages from other users[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mmesg[0m [option] [[1mn[0m|[1my[0m][m
+[m
+[1mDESCRIPTION[0m[m
+       The  [1mmesg[0m  utility is invoked by a user to control write access others have to the[m
+       terminal device associated  with  standard  error  output.   If  write  access  is[m
+       allowed,  then  programs  such as [1mtalk[0m(1) and [1mwrite[0m(1) may display messages on the[m
+       terminal.[m
+[m
+       Traditionally, write access is allowed by default.  However, as users become  more[m
+       conscious  of  various  security risks, there is a trend to remove write access by[m
+       default, at least for the primary login shell.  To make sure your ttys are set the[m
+       way you want them to be set, [1mmesg[0m should be executed in your login scripts.[m
+[m
+[1mARGUMENTS[0m[m
+       [1mn[0m      Disallow messages.[m
+[m
+       [1my[0m      Allow messages to be displayed.[m
+[m
+       If no arguments are given, [1mmesg[0m shows the current message status on standard error[m
+       output.[m
+[m
+[1mOPTIONS[0m[m
+       [1m-v[0m, [1m--verbose[0m[m
+              Explain what is being done.[m
+[m
+       [1m-V[0m, [1m--version[0m[m
+              Display version information and exit.[m
+[m
+       [1m-h[0m, [1m--help[0m[m
+              Display help text and exit.[m
+[m
+[1mEXIT[0m [1mSTATUS[0m[m
+[7m Manual page mesg(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [1mmesg[0m utility exits with one of the following values:[m
+[7m Manual page mesg(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K            [1m0[0m     Messages are allowed.[m
+[7m Manual page mesg(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K            [1m1[0m     Messages are not allowed.[m
+[7m Manual page mesg(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1m>1[0m     An error has occurred.[m
+[7m Manual page mesg(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mFILES[0m[m
+[7m Manual page mesg(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m/dev/[pt]ty[pq]?[24m[m
+[7m Manual page mesg(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSEE[0m [1mALSO[0m[m
+[7m Manual page mesg(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mlogin[0m(1), [1mtalk[0m(1), [1mwrite[0m(1), [1mwall[0m(1), [1mxterm[0m(1)[m
+[7m Manual page mesg(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mHISTORY[0m[m
+[7m Manual page mesg(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A [1mmesg[0m command appeared in Version 6 AT&T UNIX.[m
+[7m Manual page mesg(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAVAILABILITY[0m[m
+[7m Manual page mesg(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The mesg command  is  part  of  the  util-linux  package  and  is  available  from[m
+[7m Manual page mesg(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       https://www.kernel.org/pub/linux/utils/util-linux/.[m
+[7m Manual page mesg(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mesg(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kutil-linux                              July 2014                                 MESG(1)[m
+[7m Manual page mesg(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page mesg(1) line 23/60 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t]0;Lab1-5004CEM: man[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# m esg n
+]0;mesg n]0;Lab1-5004CEM: mesg[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# c lear
+[3J[H[2J]0;Lab1-5004CEM[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# l s
+]0;ls --color=auto]0;Lab1-5004CEM: ls[01;32mroot@pcDoSuegue[00m:[01;34m~/5004CEM_Session/deoliveg/MIGUEL5004CEM2020/Portfolio1-2020/Lab1-5004CEM[00m# e xit
+]0;exitexit
+
+Script done on 2020-01-24 15:46:01+0000

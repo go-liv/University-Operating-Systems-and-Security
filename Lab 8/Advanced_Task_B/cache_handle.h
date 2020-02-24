@@ -6,12 +6,18 @@
 typedef struct{
   FILE* file;        //File being read
   int bufferLength;  //Fixed buffer length
-  int alongBuffer;    //Current point in the buffer
+  int alongBuffer;  //Current point in the buffer
+  int beforeAlong;
+  int chars;
+  int charToRet;    //alongBuffer when it is being returned
   char* buffer;      //A pointer to a piece of memory
                      //  same length as "bufferlength"
+  int refillCount;
+  int bytesRead;
+  int countVowels;
+  int checkList;
+  int countIran;
 } bufferStruct;
-
-
 
 
 //Open a file with a given size of buffer to cache with

@@ -1,5 +1,6 @@
 #include "cache_handle.h"
 
+char* vowels[10] = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"};
 
 //http://www.phim.unibe.ch/comp_doc/c_manual/C/SYNTAX/struct.html
 //http://vergil.chemistry.gatech.edu/resources/programming/c-tutorial/structs.html
@@ -16,7 +17,10 @@ int buffer_refill(bufferStruct* buff){
     //If we didn't fill the buffer, fill up with EOF
     if(len<buff->bufferLength)
       for(int i=len;i<buff->bufferLength;i++)	
-	buff->buffer[i]=EOF;  //Accessing like an array!
+	      buff->buffer[i]=EOF;  //Accessing like an array!
+
+    printf("\nBuffer refilled\n");
+    buff->refillCount += 1;
     return len;
   }
   
@@ -43,6 +47,9 @@ bufferStruct* file_open(char * filename, int buffersize){
   initBuffer->bufferLength=buffersize;
   initBuffer->alongBuffer=buffersize; //Start off with no characters, so refill will work as expected
   initBuffer->buffer=(char*)malloc(sizeof(char)*buffersize);
+  initBuffer->refillCount = 0;
+  initBuffer->bytesRead = 0;
+  initBuffer->countIran = 0;
 
   buffer_refill(initBuffer);
   return initBuffer;
@@ -53,9 +60,30 @@ bufferStruct* file_open(char * filename, int buffersize){
 
 //------------------------------------------------------------------
 char return_character(bufferStruct* buff){
-  // your code goes here
-  // remember that this needs to return a char (a byte, put another way..)
-  return EOF; // this is just so the compile works...
+
+  for(int i = 0; i < 10; i++)
+  {
+    if(buff -> buffer[buff -> alongBuffer] == *vowels[i])
+      buff -> countVowels += 1;
+  }
+
+  // We need to check if the current point in the buffer is the last one that the buffer contains
+  // If so then we need to reload the buffer with the next 20 characters and get alongBuffer to point back to the 
+  //beggining of the buffer
+  if(buff -> alongBuffer == buff -> bufferLength)
+  {
+    buffer_refill(buff);
+    buff -> alongBuffer = 0;
+  }
+  // If it is not the last character in the buffer then we need to go to the next one so it can be 
+  //printed on the next run
+  else
+    buff -> alongBuffer += 1;
+
+  buff->bytesRead += sizeof(buff -> alongBuffer - 1);
+
+  // In the end we just need to return the character that was being pointed to at the beggining
+  return buff -> buffer[buff -> alongBuffer - 1];
 }
 
 

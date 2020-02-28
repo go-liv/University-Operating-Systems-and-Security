@@ -18,7 +18,8 @@ int main(){
     printf("\n%c*",character);
     //I've noticed that a null character was being printed in the beggining of the buffer, so i'll just
     //subtract these from the total number of characters
-    f->chars += 1;
+    if(character != '\0')
+      f->chars += 1;
   }
 
 
@@ -26,8 +27,11 @@ int main(){
   printf("\n\n %d Bytes read.\n", f->bytesRead);
   printf("\n Buffer refilled %d times.\n", f->refillCount);  
   printf("\n %d vowels.\n", f->countVowels);   
-  printf("\n %d other characters.\n", (f->chars - f->countVowels) - 212);
-  printf("\n %d Iran appearances.\n", f->countIran); 
+  printf("\n %d other characters.\n", (f->chars - f->countVowels));
+  printf("\n %i Iran appearances.\n", f->countIran);
+  printf("\n %i Tehran appearances.\n", f->countTehran);
+  printf("\n %i Email appearances.\n", f->countEmail);
+  printf("\n %i Sentences.\n", f->countSentences);
 
   printf("\n\n");
   //Then close the file

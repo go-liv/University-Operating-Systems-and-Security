@@ -7,16 +7,18 @@ typedef struct{
   FILE* file;        //File being read
   int bufferLength;  //Fixed buffer length
   int alongBuffer;  //Current point in the buffer
-  int beforeAlong;
-  int chars;
-  int charToRet;    //alongBuffer when it is being returned
+  int chars;  
   char* buffer;      //A pointer to a piece of memory
                      //  same length as "bufferlength"
+  char prev_char;
+  char character; //alongBuffer when it is being returned
   int refillCount;
   int bytesRead;
   int countVowels;
-  int checkList;
   int countIran;
+  int countTehran;
+  int countEmail;
+  int countSentences;
 } bufferStruct;
 
 

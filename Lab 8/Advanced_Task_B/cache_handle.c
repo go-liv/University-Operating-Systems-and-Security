@@ -1,6 +1,9 @@
 #include "cache_handle.h"
 
 char* vowels[10] = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"};
+int wordIran = 0;
+int wordTehran = 0;
+int wordEmail = 0;
 
 //http://www.phim.unibe.ch/comp_doc/c_manual/C/SYNTAX/struct.html
 //http://vergil.chemistry.gatech.edu/resources/programming/c-tutorial/structs.html
@@ -50,6 +53,8 @@ bufferStruct* file_open(char * filename, int buffersize){
   initBuffer->refillCount = 0;
   initBuffer->bytesRead = 0;
   initBuffer->countIran = 0;
+  initBuffer->countTehran = 0;
+  initBuffer->countEmail = 0;
 
   buffer_refill(initBuffer);
   return initBuffer;
@@ -60,6 +65,17 @@ bufferStruct* file_open(char * filename, int buffersize){
 
 //------------------------------------------------------------------
 char return_character(bufferStruct* buff){
+  printf("prev   %c", buff->prev_char);
+
+  buff->character = buff -> buffer[buff -> alongBuffer];
+
+  if(buff->character == '.')
+    buff->countSentences +=1;
+
+  if(buff->character == '\0' || buff -> buffer[buff -> alongBuffer - 1] == '\0')
+      buff->prev_char = buff->prev_char;
+  else  
+    buff->prev_char = buff->buffer[buff->alongBuffer-1];
 
   for(int i = 0; i < 10; i++)
   {
@@ -81,9 +97,56 @@ char return_character(bufferStruct* buff){
     buff -> alongBuffer += 1;
 
   buff->bytesRead += sizeof(buff -> alongBuffer - 1);
+  
+  
+  //Iran word appearances
+  if(buff->character == 'r' & (buff->prev_char == 'I' || buff->prev_char == 'i'))
+    wordIran += 1;
+  if(buff->character == 'a' & buff->prev_char == 'r' & wordIran == 1)
+    wordIran += 1;
+  if(buff->character == 'n' & buff->prev_char == 'a' & wordIran == 2)
+    wordIran += 1;
+  if(wordIran == 3)
+  {
+    wordIran = 0;
+    buff->countIran +=1;
+  }
+
+  //Tehran word appearances
+  if(buff->character == 'e' & (buff->prev_char == 'T' || buff->prev_char == 't'))
+    wordTehran += 1;
+  if(buff->character == 'h' & buff->prev_char == 'e' & wordTehran == 1)
+    wordTehran += 1;
+  if(buff->character == 'r' & buff->prev_char == 'h' & wordTehran == 2)
+    wordTehran += 1;
+  if(buff->character == 'a' & buff->prev_char == 'r' & wordTehran == 3)
+    wordTehran += 1;
+  if(buff->character == 'n' & buff->prev_char == 'a' & wordTehran == 4)
+    wordTehran += 1;
+  if(wordTehran == 5)
+  {
+    wordTehran= 0;
+    buff->countTehran +=1;
+  }  
+
+  //Email word appearances
+  if(buff->character == 'm' & (buff->prev_char == 'E' || buff->prev_char == 'e'))
+    wordEmail += 1;
+  if(buff->character == 'a' & buff->prev_char == 'm' & wordEmail == 1)
+    wordEmail += 1;
+  if(buff->character == 'i' & buff->prev_char == 'a' & wordEmail == 2)
+    wordEmail += 1;
+  if(buff->character == 'l' & buff->prev_char == 'i' & wordEmail == 3)
+    wordEmail += 1;
+  if(wordEmail == 4)
+  {
+    wordEmail= 0;
+    buff->countEmail +=1;
+  }  
+
 
   // In the end we just need to return the character that was being pointed to at the beggining
-  return buff -> buffer[buff -> alongBuffer - 1];
+  return buff->character;
 }
 
 

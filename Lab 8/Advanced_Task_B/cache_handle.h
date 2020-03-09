@@ -19,6 +19,9 @@ typedef struct{
   int countTehran;
   int countEmail;
   int countSentences;
+  int countAs;
+  int countAlso;
+  int countBut;
 } bufferStruct;
 
 

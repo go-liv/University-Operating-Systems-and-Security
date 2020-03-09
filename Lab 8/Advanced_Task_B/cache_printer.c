@@ -28,6 +28,7 @@ int main(){
   printf("\n Buffer refilled %d times.\n", f->refillCount);  
   printf("\n %d vowels.\n", f->countVowels);   
   printf("\n %d other characters.\n", (f->chars - f->countVowels));
+  printf("\n %i Non active word appearances (As, Also, But).\n", (f->countAs + f->countAlso + f->countBut));
   printf("\n %i Iran appearances.\n", f->countIran);
   printf("\n %i Tehran appearances.\n", f->countTehran);
   printf("\n %i Email appearances.\n", f->countEmail);

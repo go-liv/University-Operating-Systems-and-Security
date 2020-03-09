@@ -4,6 +4,9 @@ char* vowels[10] = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"};
 int wordIran = 0;
 int wordTehran = 0;
 int wordEmail = 0;
+int wordAs = 0;
+int wordAlso = 0;
+int wordBut = 0;
 
 //http://www.phim.unibe.ch/comp_doc/c_manual/C/SYNTAX/struct.html
 //http://vergil.chemistry.gatech.edu/resources/programming/c-tutorial/structs.html
@@ -69,14 +72,17 @@ char return_character(bufferStruct* buff){
 
   buff->character = buff -> buffer[buff -> alongBuffer];
 
+  //Counting sentences when we find a full mark
   if(buff->character == '.')
     buff->countSentences +=1;
 
+  //In the case of having a null character we need to keep the previous character as it was to prevent bugs
   if(buff->character == '\0' || buff -> buffer[buff -> alongBuffer - 1] == '\0')
       buff->prev_char = buff->prev_char;
   else  
     buff->prev_char = buff->buffer[buff->alongBuffer-1];
 
+  //Count vowels
   for(int i = 0; i < 10; i++)
   {
     if(buff -> buffer[buff -> alongBuffer] == *vowels[i])
@@ -98,7 +104,41 @@ char return_character(bufferStruct* buff){
 
   buff->bytesRead += sizeof(buff -> alongBuffer - 1);
   
-  
+  //Other word appearances
+  //As
+  if(buff->character == 's' & (buff->prev_char == 'A' || buff->prev_char == 'a'))
+    wordAs += 1;
+  if(wordAs == 1)
+  {
+    wordAs = 0;
+    buff->countAs +=1;
+  }
+
+  //Also
+  if(buff->character == 'l' & (buff->prev_char == 'A' || buff->prev_char == 'a'))
+    wordAlso += 1;
+  if(buff->character == 's' & buff->prev_char == 'l' & wordAlso == 1)
+    wordAlso += 1;
+  if(buff->character == 'o' & buff->prev_char == 's' & wordAlso == 2)
+    wordAlso += 1;
+  if(wordAlso == 3)
+  {
+    wordAlso = 0;
+    buff->countAlso +=1;
+  }
+
+  //But
+  if(buff->character == 'u' & (buff->prev_char == 'B' || buff->prev_char == 'b'))
+    wordBut += 1;
+  if(buff->character == 't' & buff->prev_char == 'u' & wordBut == 1)
+    wordBut += 1;
+  if(wordBut == 2)
+  {
+    wordBut = 0;
+    buff->countBut +=1;
+  }
+
+
   //Iran word appearances
   if(buff->character == 'r' & (buff->prev_char == 'I' || buff->prev_char == 'i'))
     wordIran += 1;

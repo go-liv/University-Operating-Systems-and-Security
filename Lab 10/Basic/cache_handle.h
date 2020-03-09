@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<fcntl.h> 
+#include <fcntl.h> 
 
 //The internals of this struct aren't important
 //from the user's point of view

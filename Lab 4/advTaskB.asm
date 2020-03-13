@@ -50,13 +50,13 @@ nextchar:
         jmp nextchar
    
 rowLoop:
-        lineSpaceLoop:
+        lineSpaceLoop:  ; writes the required num of spaces to screen
                       mov si, spaceChar
                       call writeString
                       dec dh
                       cmp dh, 0
                       jg lineSpaceLoop
-        lineStarLoop:
+        lineStarLoop:   ; writes the required num of stars to screen
                       mov si, starChar
                       call writeString
                       dec dl
@@ -64,6 +64,8 @@ rowLoop:
                       jg lineStarLoop
                       mov si, linebreak
                       call writeString
+
+        ; every time it loops will decrease one space but add 2 stars
         dec ch
         add cl, 2 
         mov dl, cl
@@ -71,7 +73,8 @@ rowLoop:
         cmp dh, 1
         jg rowLoop
 rowLoopReverse:
-        lineSpaceLoopReverse:
+; here the same as above happens but in reverse
+        lineSpaceLoopReverse: 
        	              mov si, spaceChar
                       call writeString
                       dec dh

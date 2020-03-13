@@ -1,3 +1,4 @@
+//FILE CACHE_HANDLE.C
 #include "cache_handle.h"
 
 
@@ -12,6 +13,7 @@ int buffer_refill(bufferStruct* buff){
     return 0;
   else{
     buff->alongBuffer=0;
+    //read
     int len=read(buff->file, buff->buffer, buff->bufferLength);
     printf("-- File read. --\n\n");
     //If we didn't fill the buffer, fill up with EOF
@@ -25,6 +27,7 @@ int buffer_refill(bufferStruct* buff){
 
 void file_close(bufferStruct* buff){
   free(buff->buffer);
+  //close
   close(buff->file);
   printf("-- File closed. --\n\n");
 }
@@ -34,6 +37,7 @@ bufferStruct* file_open(char * filename, int buffersize){
 
   //Info on malloc
   //http://www.space.unibe.ch/comp_doc/c_manual/C/FUNCTIONS/malloc.html
+  //open
   int f = open(filename, O_RDONLY | O_CREAT);
   if (&f == NULL){
     fprintf(stderr, "Cannot open %s\n", filename);

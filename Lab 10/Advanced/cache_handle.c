@@ -1,3 +1,4 @@
+//FILE CACHE_HANDLE.C
 #include "cache_handle.h"
 
 
@@ -34,6 +35,7 @@ bufferStruct* file_open(char * filename, int buffersize){
 
   //Info on malloc
   //http://www.space.unibe.ch/comp_doc/c_manual/C/FUNCTIONS/malloc.html
+  //Opening the file with the call to read only removes some of the effects of caching 
   int f = open(filename, O_RDONLY | O_CREAT);
   if (&f == NULL){
     fprintf(stderr, "Cannot open %s\n", filename);

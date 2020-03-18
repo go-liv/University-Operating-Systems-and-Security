@@ -110,13 +110,16 @@ int main(int argc, char *argv[]) {
         exit(6);
     }
 
+    //Using 2 buffers we can fill each one and check if the files have the exact same chars in every exact same position
     while(rd_size > 0)
     {
+        //read in both files into the buffer 20 chars at a time
         rd_size = read(in_fd, buf, BUF_SIZE);
         rd_size2 = read(in_fd2, buf2, BUF_SIZE);
 
         for(int i = 0; i < rd_size; i++)
         {
+            //if at an instance a char is different is the same position the files are different
             if(buf[i] != buf2[i])
             {
                 printf("\nFiles %s and %s are different.\n\n", argv[1], argv[3]);

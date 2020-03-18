@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
 
     if (argc != 3)
     {
+        //Error number one, invalid argument number
         printf("Number of arguments cannot be greater than 3, insert a input and output after the execute file.");
         exit(1);
     }
@@ -20,6 +21,7 @@ int main(int argc, char *argv[]) {
 
     if (in_fd < 0)
     {
+        //Error number 2, invalid file or error in file open
         printf("Input file invalid.");
         exit(2);
     }
@@ -29,6 +31,7 @@ int main(int argc, char *argv[]) {
 
     if (out_fd < 0)
     {
+        //Error number 3, invalid file or error in file create
         printf("Output file invalid.");
         exit(3);
     }
@@ -39,6 +42,7 @@ int main(int argc, char *argv[]) {
 
         if (rd_size <0)
         {
+            //Error number 4, invalid number of characters in buffer
             printf("Buffer has an invalid number of characters. Restart code or check input/output files.");
             exit(4); 
         }
